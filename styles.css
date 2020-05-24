@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Antic", sans-serif;
+  font-family: "Quantico", sans-serif;
+  cursor: default;
+}
+
+button {
+  font-family: "Quantico", sans-serif;
+}
+
+/********************************************** TITLE SECTION **********************************************/
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  color: #162447;
+  filter: drop-shadow(1px 1px #e43f5a8f);
+}
+
+/********************************************** APP SECTION **********************************************/
+
+.app {
+  display: flex;
+  min-height: 90vh;
+  transition: all 1s ease;
+}
+
+/********************* TIMER SECTION *********************/
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  position: relative;
+  background-color: #162447;
+}
+
+.moving,
+.outline {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(270deg);
+  pointer-events: none;
+}
+
+#time-display {
+  font-family: "Quantico", sans-serif;
+  font-size: 5rem;
+  color: rgb(64, 231, 64);
+  filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.7));
+}
+
+.stop {
+  transform: scaleX(-1);
+  cursor: pointer;
+  color: white;
+  margin: 1rem 1rem;
+}
+
+.stop:hover {
+  color: #e43f5a;
+  transition: all 0.25s ease;
+}
+
+.stop:focus {
+  outline: none;
+
+  color: white;
+}
+
+/********************* CONTROLS SECTION *********************/
+
+.controls-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1f4068;
+}
+
+.time-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-select h3 {
+  color: #e43f5a;
+  font-size: 2.5rem;
+  filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.7));
+}
+
+.slidecontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 75%;
+  height: 25px;
+  background: white;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 50px;
+  margin: 5rem 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 50px;
+  background: #e43f5a;
+  cursor: pointer;
+  border: solid 2px #1f4068;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  height: 60px;
+  width: 60px;
+  transition: all 0.25s ease;
+}
+
+.slider::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  background: #e43f5a;
+  cursor: pointer;
+}
+
+.start {
+  color: rgb(64, 231, 64);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.start:hover {
+  color: white;
+  transition: all 0.25s ease;
+}
+
+/********************************************** MEDIA **********************************************/
+
+@media (max-width: 800px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .counter-container {
+    flex: 5;
+  }
+  #time-display {
+    font-size: 3.5rem;
+  }
+
+  .slider {
+    margin: 1rem 0 2rem 0;
+  }
+}

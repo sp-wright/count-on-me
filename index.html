@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count On Me</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/92a286bacb.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Quantico&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">COUNT ON ME</h1>
+    </header>
+    <div class="app">
+      <div class="counter-container">
+        <h3 id="time-display">START</h3>
+
+        <svg class="outline" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="226.5" cy="226.5" r="185" stroke="white" stroke-width="20" />
+        </svg>
+
+        <svg class="moving" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="226.5" cy="226.5" r="185" stroke="#e43f5a" stroke-width="20" />
+        </svg>
+        <div class="time-controls">
+          <i class="stop fa-3x fas fa-redo-alt"></i>
+        </div>
+      </div>
+      <div class="controls-container">
+        <div class="time-select">
+          <h3>Choose Time</h3>
+          <div class="slidecontainer">
+            <input type="range" data-orientation="vertical" min="30" max="600" value="300" step="30" class="slider" id="timeRange" />
+          </div>
+          <i class="start fas fa-3x fa-play"></i>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
