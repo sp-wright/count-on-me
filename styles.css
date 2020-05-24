@@ -51,8 +51,8 @@ header {
 .moving,
 .outline {
   position: absolute;
-  width: 70%;
-  height: 70%;
+  width: 68%;
+  height: 68%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(270deg);
